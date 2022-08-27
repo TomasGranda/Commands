@@ -1,0 +1,17 @@
+{
+    "name": "net.getoutstudio.commands",
+    "version": "1.0.0",
+    "description": "This packages contains a commands implementation.",
+    "displayName": "GetOut Studio Commands",
+    "author": {
+        "name": "GetOutStudio",
+        "email": "getoutstudio22@gmail.com",
+        "url": "https://getoutweb.herokuapp.com"
+    },
+    "keywords": [
+        "commands",
+        "getoutstudio",
+        "utils",
+        "pattern"
+    ]
+}
