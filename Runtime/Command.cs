@@ -1,8 +1,11 @@
-public interface Command
+namespace GTSCommands
 {
-    bool ShouldExecute();
+    public interface Command
+    {
+        bool ShouldExecute();
 
-    void Execute();
+        void Execute();
 
-    void Reset();
+        void Reset();
+    }
 }

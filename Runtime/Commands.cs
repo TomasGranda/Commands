@@ -1,25 +1,30 @@
 using System.Collections.Generic;
 
-public class Commands
+namespace GTSCommands
 {
-    private HashSet<Command> commands = new HashSet<Command>();
-
-    public Commands() { }
-
-    public void AddCommand(Command command)
+    public class Commands
     {
-        commands.Add(command);
-    }
+        private HashSet<Command> commands = new HashSet<Command>();
 
-    public void ExecuteCommands()
-    {
-        foreach (Command command in commands)
+        public Commands() { }
+
+        public void AddCommand(Command command)
         {
-            if (command.ShouldExecute())
+            commands.Add(command);
+        }
+
+        public void ExecuteCommands()
+        {
+            foreach (Command command in commands)
             {
-                command.Execute();
-            } else {
-                command.Reset();
+                if (command.ShouldExecute())
+                {
+                    command.Execute();
+                }
+                else
+                {
+                    command.Reset();
+                }
             }
         }
     }

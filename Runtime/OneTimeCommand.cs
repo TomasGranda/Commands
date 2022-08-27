@@ -1,19 +1,23 @@
-public abstract class OneTimeCommand : Command
+
+namespace GTSCommands
 {
-    private bool wasExecuted = false;
-
-    public virtual void Execute()
+    public abstract class OneTimeCommand : Command
     {
-        wasExecuted = true;
-    }
+        private bool wasExecuted = false;
 
-    public virtual void Reset()
-    {
-        wasExecuted = false;
-    }
+        public virtual void Execute()
+        {
+            wasExecuted = true;
+        }
 
-    public virtual bool ShouldExecute()
-    {
-        return !wasExecuted;
+        public virtual void Reset()
+        {
+            wasExecuted = false;
+        }
+
+        public virtual bool ShouldExecute()
+        {
+            return !wasExecuted;
+        }
     }
 }
